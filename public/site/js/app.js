@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — app.js
+   Delivery Master — app.js
    Shared logic used by every page:
    · helpers & formatting
    · cart + wishlist state (localStorage)
@@ -401,7 +401,7 @@
         <button class="icon-btn burger" id="burgerBtn" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
-        <a class="logo" href="index.html" aria-label="ÉLAN home">ÉLAN<span class="logo-dot"></span></a>
+        <a class="logo" href="index.html" aria-label="Delivery Master home">Delivery Master<span class="logo-dot"></span></a>
         <nav class="main-nav" aria-label="Main navigation">
           <ul>${navHtml}</ul>
         </nav>
@@ -444,7 +444,7 @@
     root.innerHTML = `
       <div class="footer-newsletter">
         <div>
-          <h3 class="fn-title">Join The ÉLAN List</h3>
+          <h3 class="fn-title">Join The Delivery Master List</h3>
           <p class="fn-sub">10% off your first order, early access to drops, and members-only offers.</p>
         </div>
         <div>
@@ -457,8 +457,8 @@
       </div>
       <div class="footer-main">
         <div class="footer-brand">
-          <a class="logo" href="index.html">ÉLAN<span class="logo-dot"></span></a>
-          <p>ÉLAN is a premium fashion destination for women and men — considered design, honest fabrics and pieces that outlast the season.</p>
+          <a class="logo" href="index.html">Delivery Master<span class="logo-dot"></span></a>
+          <p>Delivery Master is a premium fashion destination for women and men — considered design, honest fabrics and pieces that outlast the season.</p>
           <div class="social-row">
             <a href="info.html?page=contact" aria-label="Instagram">${I.instagram}</a>
             <a href="info.html?page=contact" aria-label="Facebook">${I.facebook}</a>
@@ -490,7 +490,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="info.html?page=about">About ÉLAN</a></li>
+            <li><a href="info.html?page=about">About Delivery Master</a></li>
             <li><a href="info.html?page=privacy">Privacy Policy</a></li>
             <li><a href="info.html?page=terms">Terms &amp; Conditions</a></li>
             <li><a href="info.html?page=contact">Contact Us</a></li>
@@ -498,7 +498,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© ${new Date().getFullYear()} ÉLAN Fashion Group. All rights reserved. Demo store — no real transactions.</span>
+        <span>© ${new Date().getFullYear()} Delivery Master. All rights reserved. Demo store — no real transactions.</span>
         <div class="legal">
           <a href="info.html?page=privacy">Privacy</a>
           <a href="info.html?page=terms">Terms</a>
@@ -705,7 +705,7 @@
 
     root.innerHTML = `
       <div class="mm-head">
-        <a class="logo" href="index.html" data-close-layers>ÉLAN<span class="logo-dot"></span></a>
+        <a class="logo" href="index.html" data-close-layers>Delivery Master<span class="logo-dot"></span></a>
         <button class="icon-btn" data-close-layers aria-label="Close menu">${I.close}</button>
       </div>
       <div class="mm-body">
@@ -762,7 +762,7 @@
         <div class="so-head">
           <form id="soForm">
             ${I.search}
-            <input type="search" id="soInput" placeholder="Search ÉLAN…" aria-label="Search">
+            <input type="search" id="soInput" placeholder="Search Delivery Master…" aria-label="Search">
           </form>
           <button class="icon-btn" data-close-layers aria-label="Close search">${I.close}</button>
         </div>

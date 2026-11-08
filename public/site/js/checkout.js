@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — checkout.js
+   Delivery Master — checkout.js
    Demo checkout: form validation, delivery method, order
    summary and a simulated order confirmation. No backend —
    nothing is sent anywhere and no payment is processed.

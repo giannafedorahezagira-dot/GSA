@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — wishlist.js
+   Delivery Master — wishlist.js
    Saved products grid with move-to-bag and remove actions
    ============================================================ */
 

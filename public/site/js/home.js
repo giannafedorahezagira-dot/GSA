@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — home.js
+   Delivery Master — home.js
    Homepage: hero slider, category tiles, trending grid,
    promo banners, new-arrivals scroll row, editorial image
    ============================================================ */

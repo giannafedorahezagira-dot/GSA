@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — product.js
+   Delivery Master — product.js
    Product details page: gallery, color/size selection,
    quantity, add to bag, wishlist, accordions, related products
    ============================================================ */
@@ -23,7 +23,7 @@
       return;
     }
 
-    document.title = `${p.name} | ÉLAN`;
+    document.title = `${p.name} | Delivery Master`;
 
     /* breadcrumb */
     $('#pdpCrumbs').innerHTML = `
@@ -139,7 +139,7 @@
           <div class="acc-panel"><div class="acc-body">
             <ul>
               <li>Product code: ${E.esc(p.id.toUpperCase())}</li>
-              <li>Designed in-house at the ÉLAN studio.</li>
+              <li>Designed in-house at the Delivery Master studio.</li>
               <li>Responsibly sourced materials — see our sustainability page for details.</li>
             </ul>
           </div></div>

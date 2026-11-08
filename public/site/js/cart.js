@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — cart.js
+   Delivery Master — cart.js
    Shopping bag page: line items with quantity controls,
    removal, promo codes, totals and empty state
    ============================================================ */

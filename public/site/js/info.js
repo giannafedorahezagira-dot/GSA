@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — info.js
+   Delivery Master — info.js
    Static info pages: about, delivery, returns, privacy,
    terms, size guide, FAQ & contact — rendered from content
    objects so no page is ever an empty stub
@@ -12,12 +12,12 @@
 
   const PAGES = {
     about: {
-      title: 'About ÉLAN',
+      title: 'About Delivery Master',
       crumb: 'About Us',
       blocks: [
-        { h: 'Dress Like It Matters', p: 'ÉLAN was founded on a simple belief: getting dressed should feel like an event, even on an ordinary Tuesday. We started as a small studio label making precisely-cut essentials, and we\'ve grown into a full fashion destination — while keeping the studio\'s obsession with fit, fabric and finish.' },
+        { h: 'Dress Like It Matters', p: 'Delivery Master was founded on a simple belief: getting dressed should feel like an event, even on an ordinary Tuesday. We started as a small studio label making precisely-cut essentials, and we\'ve grown into a full fashion destination — while keeping the studio\'s obsession with fit, fabric and finish.' },
         { h: 'What We Stand For', p: 'Considered design over fast noise. Our collections are built around pieces you\'ll re-wear for years: a perfect white tee, a sharp shoulder, a shoe that walks the whole city. Every season we add new energy — but the fundamentals never go out of style.' },
-        { h: 'The ÉLAN Studio', p: 'Every ÉLAN piece starts as a sketch in our in-house studio, is sampled on real bodies in real sizes, and is produced by partner ateliers audited for fair working conditions. When you buy from ÉLAN you buy from people we know by name.' },
+        { h: 'The Delivery Master Studio', p: 'Every Delivery Master piece starts as a sketch in our in-house studio, is sampled on real bodies in real sizes, and is produced by partner ateliers audited for fair working conditions. When you buy from Delivery Master you buy from people we know by name.' },
         { h: 'By The Numbers', p: 'Over 2 million orders delivered. A 4.8-star average product rating. A 30-day, free-returns promise on every single item. And a customer care team that answers within hours, not days.' }
       ]
     },
@@ -66,9 +66,9 @@
       title: 'Terms & Conditions',
       crumb: 'Terms',
       blocks: [
-        { h: 'The Demo Store', p: 'ÉLAN is a front-end demonstration project. No real transactions occur, no payments are processed and no personal data leaves your browser. All products, prices and promotions are illustrative.' },
+        { h: 'The Demo Store', p: 'Delivery Master is a front-end demonstration project. No real transactions occur, no payments are processed and no personal data leaves your browser. All products, prices and promotions are illustrative.' },
         { h: 'Prices & Promotions', p: 'All prices are shown in USD including taxes. Promo codes WELCOME10 and EXTRA20 are active demo codes. The free-delivery threshold is $75.' },
-        { h: 'Intellectual Property', p: 'The ÉLAN brand identity, layouts and copy on this site are original demonstration content. Product photography is served from stock sources for demonstration purposes.' },
+        { h: 'Intellectual Property', p: 'The Delivery Master brand identity, layouts and copy on this site are original demonstration content. Product photography is served from stock sources for demonstration purposes.' },
         { h: 'Liability', p: 'Nothing on this site constitutes financial, legal or fashion-critical advice. Dress joyfully and at your own risk.' }
       ]
     },
@@ -123,7 +123,7 @@
         { h: 'Talk To Us', contact: [
           { icon: 'chat', b: 'Live Chat', s: 'Available 24/7 — average reply in under 2 minutes.' },
           { icon: 'mail', b: 'care@elan-fashion.example', s: 'Email us any time — we reply within 4 hours, 7 days a week.' },
-          { icon: 'phone', b: '+1 (800) 555-ÉLAN', s: 'Mon–Fri, 8am–8pm. Sat, 9am–5pm.' }
+          { icon: 'phone', b: '+1 (800) 555-MAST', s: 'Mon–Fri, 8am–8pm. Sat, 9am–5pm.' }
         ]},
         { h: 'Before You Write', p: 'For order questions, have your order number ready (it starts with ÉLN-). For returns, the fastest route is the Returns page — most refunds are approved instantly.' },
         { h: 'Press & Partnerships', p: 'For collaborations, press requests and influencer programmes, email press@elan-fashion.example with your media kit. We read everything and love bold ideas.' },
@@ -135,7 +135,7 @@
   function render() {
     const key = E.getParam('page') || 'about';
     const page = PAGES[key] || PAGES.about;
-    document.title = `${page.title} | ÉLAN`;
+    document.title = `${page.title} | Delivery Master`;
     $('#infoTitle').textContent = page.title;
     $('#infoCrumb').textContent = page.crumb;
 

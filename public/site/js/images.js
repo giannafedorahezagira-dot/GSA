@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — automatic data file.
+   Delivery Master — automatic data file.
    Made by scripts/build_catalog.mjs — do not edit by hand.
    ============================================================ */
 // Big pictures used for banners and menus

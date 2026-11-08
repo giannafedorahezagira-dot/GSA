@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — automatic data file.
+   Delivery Master — automatic data file.
    Made by scripts/build_catalog.mjs — do not edit by hand.
    ============================================================ */
 // All products in the shop
@@ -7,7 +7,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-satin-slip-dress",
     "name": "Sculpted Satin Slip Dress",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "dresses",
@@ -60,7 +60,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-oversized-blazer",
     "name": "Oversized Double-Breast Blazer",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "blazers",
@@ -111,7 +111,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-mohair-cardigan",
     "name": "Cloud Knit Cardigan",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "knitwear",
@@ -163,7 +163,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-wide-leg-trousers",
     "name": "Wide Leg Tailored Trousers",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "trousers",
@@ -215,7 +215,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-belted-trench",
     "name": "Belted Classic Trench Coat",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "coats",
@@ -268,7 +268,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-satin-cami-top",
     "name": "Satin Bias Cami Top",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "tops",
@@ -324,7 +324,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-high-rise-jeans",
     "name": "High Rise Straight Jeans",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "denim",
@@ -376,7 +376,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "w-pleated-midi-skirt",
     "name": "Pleated Midi Skirt",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "women",
     "category": "clothing",
     "sub": "skirts",
@@ -428,7 +428,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-heavyweight-tee",
     "name": "Heavyweight Essential Tee",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "tshirts",
@@ -483,7 +483,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-oxford-shirt",
     "name": "Oxford Button-Down Shirt",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "shirts",
@@ -534,7 +534,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-fleece-hoodie",
     "name": "Full Zip Fleece Hoodie",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "hoodies",
@@ -587,7 +587,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-nylon-bomber",
     "name": "Tech Nylon Bomber Jacket",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "jackets",
@@ -639,7 +639,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-slim-stretch-denim",
     "name": "Slim Stretch Denim",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "denim",
@@ -690,7 +690,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "m-merino-crew-knit",
     "name": "Merino Crew Knit",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "men",
     "category": "clothing",
     "sub": "knitwear",
@@ -745,7 +745,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-slingback-heels",
     "name": "Pointed Slingback Heels",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "heels",
@@ -799,7 +799,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-court-sneakers",
     "name": "Court Leather Sneakers",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "sneakers",
@@ -852,7 +852,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-chelsea-boots",
     "name": "Leather Chelsea Boots",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "boots",
@@ -905,7 +905,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-trail-sneakers",
     "name": "Chunky Trail Sneakers",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "sneakers",
@@ -958,7 +958,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-leather-loafers",
     "name": "Penny Leather Loafers",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "loafers",
@@ -1011,7 +1011,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "s-strappy-sandals",
     "name": "Strappy Heeled Sandals",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "shoes",
     "sub": "sandals",
@@ -1065,7 +1065,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-structured-tote",
     "name": "Structured Everyday Tote",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "bags",
@@ -1112,7 +1112,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-layered-necklace",
     "name": "Gold Layered Necklace",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "jewelry",
@@ -1159,7 +1159,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-oversized-sunglasses",
     "name": "Oversized Square Sunglasses",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "sunglasses",
@@ -1207,7 +1207,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-minimal-watch",
     "name": "Minimal Leather Watch",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "watches",
@@ -1254,7 +1254,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-cashmere-scarf",
     "name": "Brushed Cashmere Scarf",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "scarves",
@@ -1302,7 +1302,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-wool-cap",
     "name": "Wool Baseball Cap",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "caps",
@@ -1349,7 +1349,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "a-crossbody-bag",
     "name": "Compact Crossbody Bag",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "accessories",
     "sub": "bags",
@@ -1396,7 +1396,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "b-velvet-lipstick",
     "name": "Velvet Matte Lipstick",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "beauty",
     "sub": "lips",
@@ -1443,7 +1443,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "b-eau-de-parfum",
     "name": "Nuit Blanche Eau de Parfum",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "beauty",
     "sub": "fragrance",
@@ -1483,7 +1483,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "b-glow-serum",
     "name": "Daily Glow Vitamin C Serum",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "beauty",
     "sub": "skincare",
@@ -1523,7 +1523,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "b-radiance-palette",
     "name": "Radiance Cream Palette",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "beauty",
     "sub": "makeup",
@@ -1562,7 +1562,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "sp-seamless-leggings",
     "name": "Seamless Sculpt Leggings",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "sport",
     "sub": "leggings",
@@ -1612,7 +1612,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "sp-training-tee",
     "name": "Airflow Training Tee",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "sport",
     "sub": "training",
@@ -1663,7 +1663,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "sp-support-bra",
     "name": "Medium Support Sports Bra",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "sport",
     "sub": "bras",
@@ -1715,7 +1715,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "sp-running-jacket",
     "name": "Featherlight Running Jacket",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "sport",
     "sub": "outerwear",
@@ -1766,7 +1766,7 @@ window.ELAN_PRODUCTS = [
   {
     "id": "sp-training-joggers",
     "name": "Tapered Training Joggers",
-    "brand": "ÉLAN Studio",
+    "brand": "Delivery Master",
     "gender": "unisex",
     "category": "sport",
     "sub": "joggers",

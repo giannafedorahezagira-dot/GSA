@@ -1,5 +1,5 @@
 /* ============================================================
-   ÉLAN — shop.js
+   Delivery Master — shop.js
    Product listing page: URL-driven filters (gender, cat, sub,
    sale, new, q), sidebar filters (category, size, color, price),
    sorting, active pills, load-more and the mobile filter drawer
@@ -49,10 +49,10 @@
   }
 
   function subtitleFor() {
-    if (state.q) return `Results for “${state.q}” across the full ÉLAN collection`;
+    if (state.q) return `Results for “${state.q}” across the full Delivery Master collection`;
     if (state.sale) return 'Final markdowns — up to 50% off. While stocks last.';
     if (state.isNew) return 'The latest drops, updated weekly.';
-    return 'Hand-picked styles from the ÉLAN studio.';
+    return 'Hand-picked styles from the Delivery Master studio.';
   }
 
   /* ---------- core filtering ---------- */
@@ -334,7 +334,7 @@
     // header texts
     $('#shopTitle').textContent = titleFor();
     $('#shopSubtitle').textContent = subtitleFor();
-    document.title = `${titleFor()} | ÉLAN`;
+    document.title = `${titleFor()} | Delivery Master`;
 
     // breadcrumb
     const crumb = $('#shopCrumbs');
