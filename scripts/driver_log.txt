@@ -1,18 +1,53 @@
-[20:07:54] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:07:54] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:06] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:06] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:18] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:18] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:30] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:30] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:42] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:43] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:55] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:08:55] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:07] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:07] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:19] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:19] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:31] hero_w1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
-[20:09:31] hero_m1: error Failed to make image search request: 356 |                 headers, 357 |                 body: JSON.stringify(body), 358 |             }); 359 |             if (!response.ok) { 360 |                 
+[20:15:35] done hero_w1: 8 imgs
+[20:15:35] done hero_m1: 8 imgs
+[20:15:35] done promo_1: 4 imgs
+[20:15:39] done promo_2: 4 imgs
+[20:15:39] done p_dress: 8 imgs
+[20:15:42] done p_blazer: 8 imgs
+[20:15:44] done p_knit: 8 imgs
+[20:15:45] done p_trousers: 8 imgs
+[20:15:45] p_cami: 429, sleep 30s
+[20:16:06] done p_trench: 8 imgs
+[20:16:06] p_jeans_w: 429, sleep 30s
+[20:16:15] p_cami: 429, sleep 45s
+[20:16:36] p_jeans_w: 429, sleep 45s
+[20:17:00] p_cami: 429, sleep 60s
+[20:17:22] p_jeans_w: 429, sleep 60s
+[20:18:00] p_cami: 429, sleep 75s
+[20:18:22] p_jeans_w: 429, sleep 75s
+[20:19:15] p_cami: 429, sleep 90s
+[20:19:37] p_jeans_w: 429, sleep 90s
+[20:20:49] done p_cami: 8 imgs
+[20:21:10] done p_jeans_w: 8 imgs
+[20:21:10] done p_skirt: 8 imgs
+[20:21:10] done p_tee_m: 8 imgs
+[20:21:10] done p_shirt_m: 8 imgs
+[20:21:10] done p_hoodie: 8 imgs
+[20:21:10] done p_bomber: 8 imgs
+[20:21:10] p_merino: 429, sleep 30s
+[20:21:15] done p_jeans_m: 8 imgs
+[20:21:46] done p_merino: 8 imgs
+[20:21:46] done p_heels: 8 imgs
+[20:21:46] done p_sneakers_w: 8 imgs
+[20:21:46] done p_chelsea: 8 imgs
+[20:21:46] done p_chunky: 8 imgs
+[20:21:46] done p_loafers: 7 imgs
+[20:21:48] done p_sandals: 8 imgs
+[20:21:52] done p_tote: 8 imgs
+[20:21:52] done p_necklace: 8 imgs
+[20:21:52] p_watch: 429, sleep 30s
+[20:21:56] done p_sunglasses: 8 imgs
+[20:22:25] done p_watch: 8 imgs
+[20:22:25] done p_scarf: 8 imgs
+[20:22:25] done p_cap: 8 imgs
+[20:22:25] done p_crossbody: 8 imgs
+[20:22:25] done p_lipstick: 7 imgs
+[20:22:25] done p_perfume: 8 imgs
+[20:22:25] done p_serum: 8 imgs
+[20:22:25] done p_palette: 8 imgs
+[20:22:28] done p_leggings: 8 imgs
+[20:22:30] done p_trainingtee: 8 imgs
+[20:22:31] done p_sportsbra: 8 imgs
+[20:22:31] p_joggers: 429, sleep 30s
+[20:22:34] done p_runjacket: 8 imgs
+[20:23:02] p_joggers: 429, sleep 45s

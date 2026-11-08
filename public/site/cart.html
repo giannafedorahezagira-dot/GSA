@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Bag | ÉLAN</title>
+  <meta name="description" content="Review the items in your ÉLAN shopping bag.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e0e0e'/%3E%3Ctext x='32' y='45' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='white' text-anchor='middle'%3E%C3%89%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header"></header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><span class="current">Shopping Bag</span>
+    </nav>
+
+    <div class="page-head">
+      <h1 class="page-title">Shopping Bag</h1>
+      <p class="page-sub" id="cartCountNote"></p>
+    </div>
+
+    <div class="cart-layout" id="cartLayout">
+      <div class="cart-items" id="cartItems"><!-- line items rendered by cart.js --></div>
+
+      <aside class="summary" aria-label="Order summary">
+        <h3>Order Summary</h3>
+
+        <div class="promo-row">
+          <input type="text" id="promoInput" placeholder="Promo code (try WELCOME10)" aria-label="Promo code">
+          <button class="btn btn--outline btn--sm" id="promoApply">Apply</button>
+        </div>
+        <p class="promo-msg" id="promoMsg"></p>
+
+        <div class="sum-row"><span>Subtotal</span><b id="sumSubtotal">$0.00</b></div>
+        <div class="sum-row discount" id="sumDiscountRow" hidden><span>Promo discount</span><span id="sumDiscount">-$0.00</span></div>
+        <div class="sum-row"><span>Delivery</span><b id="sumDelivery">$0.00</b></div>
+        <hr class="sum-divider">
+        <div class="sum-total"><span>Total</span><span id="sumTotal">$0.00</span></div>
+        <p class="sum-note">Free standard delivery on orders over $75. Taxes included. 30-day free returns on everything.</p>
+
+        <a class="btn btn--wide" href="checkout.html" id="checkoutBtn">Proceed to Checkout</a>
+        <a class="btn btn--outline btn--wide" href="shop.html" style="margin-top:10px">Continue Shopping</a>
+      </aside>
+    </div>
+
+    <div class="empty-state" id="cartEmpty" hidden>
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 10V6a3 3 0 016 0v4"/></svg>
+      </div>
+      <h3>Your Bag Is Empty</h3>
+      <p>Once you add something to your bag, it will appear here. Ready to start?</p>
+      <div class="os-actions">
+        <a class="btn" href="shop.html?gender=women">Shop Women</a>
+        <a class="btn btn--outline" href="shop.html?gender=men">Shop Men</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

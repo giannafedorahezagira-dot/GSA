@@ -25,33 +25,39 @@ def run_one(key):
     out = f"{IMG_DIR}/{key}.json"
     if os.path.exists(out) and os.path.getsize(out) > 0:
         return f"skip {key}"
-    backoff = 20
+    backoff = 30
     while time.time() < DEADLINE:
         try:
             r = subprocess.run(
-                ["z-ai", "image-search", "-q", query, "-c", str(count),
-                 "--gl", "us", "--no-rank", "-o", out],
+                ["z-ai", "image-search", "-q", query, "-c", str(count), "--gl", "us", "--no-rank"],
                 capture_output=True, text=True, timeout=200)
-            if os.path.exists(out) and os.path.getsize(out) > 0:
-                with open(out) as f:
-                    data = json.load(f)
-                n = len(data.get("results", []))
-                if data.get("success") and n > 0:
-                    return f"done {key}: {n} imgs"
-                os.remove(out)
-                log(f"{key}: empty result, retrying")
-            else:
-                err = (r.stderr or r.stdout or "")[:200].replace("\n", " ")
-                if "429" in err:
-                    log(f"{key}: 429, sleep {backoff}s")
-                    time.sleep(backoff)
-                    backoff = min(backoff + 10, 90)
+            text = r.stdout or ""
+            # the CLI prints emoji logs, then pretty JSON starting at first "{"
+            idx = text.find("{")
+            if idx >= 0:
+                try:
+                    data = json.JSONDecoder().raw_decode(text[idx:])[0]
+                except Exception:
+                    data = None
+                if isinstance(data, dict) and data.get("success") and data.get("results"):
+                    with open(out, "w") as f:
+                        json.dump(data, f)
+                    return f"done {key}: {len(data['results'])} imgs"
+                if data is not None:
+                    log(f"{key}: api says failure: {str(data)[:120]}")
+                    time.sleep(15)
                     continue
-                log(f"{key}: error {err}")
-                time.sleep(10)
+            full = (r.stderr or "") + text
+            if "429" in full or "Too many requests" in full:
+                log(f"{key}: 429, sleep {backoff}s")
+                time.sleep(backoff)
+                backoff = min(backoff + 15, 150)
+                continue
+            log(f"{key}: no json, error {(r.stderr or text)[:200]}".replace("\n", " "))
+            time.sleep(15)
         except subprocess.TimeoutExpired:
             log(f"{key}: timeout")
-        time.sleep(2)
+        time.sleep(3)
     return f"FAIL {key}"
 
 keys = [l.split("|")[0] for l in QUERIES]
