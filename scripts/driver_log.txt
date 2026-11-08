@@ -51,3 +51,10 @@
 [20:22:31] p_joggers: 429, sleep 30s
 [20:22:34] done p_runjacket: 8 imgs
 [20:23:02] p_joggers: 429, sleep 45s
+[20:23:47] p_joggers: 429, sleep 60s
+[20:24:47] p_joggers: 429, sleep 75s
+[20:26:02] p_joggers: 429, sleep 90s
+[20:27:32] p_joggers: 429, sleep 105s
+[20:29:17] p_joggers: 429, sleep 120s
+[20:31:25] done p_joggers: 8 imgs
+[20:31:25] COMPLETE. missing: none

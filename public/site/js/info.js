@@ -8,6 +8,7 @@
 (function () {
   'use strict';
   const E = window.ELAN;
+  const $ = E.$; const $$ = E.$$;
 
   const PAGES = {
     about: {

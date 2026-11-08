@@ -7,7 +7,8 @@
 (function () {
   'use strict';
   const E = window.ELAN;
-  const IMG = window.ELAN.IMG;
+  const $ = E.$; const $$ = E.$$;
+  const IMG = (window.ELAN && window.ELAN.IMG) || {};
 
   /* ================= HERO SLIDER ================= */
 

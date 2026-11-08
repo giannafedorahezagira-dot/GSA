@@ -8,6 +8,7 @@
 (function () {
   'use strict';
   const E = window.ELAN;
+  const $ = E.$; const $$ = E.$$;
 
   let deliveryCost = 0; // standard = free over $75, express = 9.99
 
@@ -111,11 +112,11 @@
     const btn = $('#placeOrderBtn');
     btn.disabled = true;
     btn.innerHTML = 'Processing…';
-    E.clearPromo();
 
     /* simulate a brief payment-authorisation delay */
     setTimeout(() => {
-      const t = E.cartTotals(deliveryCost);
+      const t = E.cartTotals(deliveryCost);   // work out the total first
+      E.clearPromo();                          // then tidy up the saved code
       const orderNo = 'ÉLN-' + String(Math.floor(100000 + Math.random() * 900000));
       $('#orderNo').textContent = orderNo;
       $('#orderEmail').textContent = $('#coEmail').value.trim();

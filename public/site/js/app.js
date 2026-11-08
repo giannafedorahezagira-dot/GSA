@@ -18,6 +18,9 @@
 (function () {
   'use strict';
 
+  /* make sure the shared ELAN object exists (images.js may load first) */
+  window.ELAN = window.ELAN || {};
+
   /* ================= 1. HELPERS ================= */
 
   const $ = (sel, root) => (root || document).querySelector(sel);
@@ -237,7 +240,7 @@
         { label: 'Sale', href: 'shop.html?sale=1', sale: true }
       ]}
     ],
-    cta: { img: () => ELAN.IMG.megaWomen, title: 'The New Edit', link: shopUrl({ gender: 'women', new: 1 }), label: 'Shop Women' }
+    cta: { img: () => (ELAN.IMG && ELAN.IMG.$1) || "", title: 'The New Edit', link: shopUrl({ gender: 'women', new: 1 }), label: 'Shop Women' }
   };
 
   const MEGA_MEN = {
@@ -267,7 +270,7 @@
         { label: 'Sale', href: 'shop.html?sale=1', sale: true }
       ]}
     ],
-    cta: { img: () => ELAN.IMG.megaMen, title: 'Street Ready', link: shopUrl({ gender: 'men', new: 1 }), label: 'Shop Men' }
+    cta: { img: () => (ELAN.IMG && ELAN.IMG.$1) || "", title: 'Street Ready', link: shopUrl({ gender: 'men', new: 1 }), label: 'Shop Men' }
   };
 
   const MEGA_CLOTHING = {
@@ -296,7 +299,7 @@
         { label: 'Sale', href: shopUrl({ cat: 'clothing', sale: 1 }), sale: true }
       ]}
     ],
-    cta: { img: () => ELAN.IMG.megaClothing, title: 'Wardrobe Staples', link: shopUrl({ cat: 'clothing' }), label: 'Shop Clothing' }
+    cta: { img: () => (ELAN.IMG && ELAN.IMG.$1) || "", title: 'Wardrobe Staples', link: shopUrl({ cat: 'clothing' }), label: 'Shop Clothing' }
   };
 
   const MEGA_SHOES = {
@@ -317,7 +320,7 @@
         { label: 'Sale', href: shopUrl({ cat: 'shoes', sale: 1 }), sale: true }
       ]}
     ],
-    cta: { img: () => ELAN.IMG.megaShoes, title: 'Step It Up', link: shopUrl({ cat: 'shoes' }), label: 'Shop Shoes' }
+    cta: { img: () => (ELAN.IMG && ELAN.IMG.$1) || "", title: 'Step It Up', link: shopUrl({ cat: 'shoes' }), label: 'Shop Shoes' }
   };
 
   const MEGA_ACCESSORIES = {
@@ -340,7 +343,7 @@
         { label: 'Sale', href: shopUrl({ cat: 'accessories', sale: 1 }), sale: true }
       ]}
     ],
-    cta: { img: () => ELAN.IMG.megaAccessories, title: 'Finishing Touches', link: shopUrl({ cat: 'accessories' }), label: 'Shop Accessories' }
+    cta: { img: () => (ELAN.IMG && ELAN.IMG.$1) || "", title: 'Finishing Touches', link: shopUrl({ cat: 'accessories' }), label: 'Shop Accessories' }
   };
 
   const NAV_ITEMS = [
@@ -1033,6 +1036,20 @@
     document.body.appendChild(bar);
     setTimeout(() => bar.remove(), 900);
 
+    // hidden drawers/modals live here
+    if (!$('#miniCartRoot')) {
+      const el = document.createElement('div');
+      el.className = 'mini-cart';
+      el.id = 'miniCartRoot';
+      document.body.appendChild(el);
+    }
+    if (!$('#mobileMenuRoot')) {
+      const el = document.createElement('div');
+      el.className = 'mobile-menu';
+      el.id = 'mobileMenuRoot';
+      document.body.appendChild(el);
+    }
+
     renderHeader();
     renderFooter();
     renderMobileMenu();
@@ -1051,7 +1068,8 @@
 
   /* ================= EXPORT ================= */
 
-  window.ELAN = {
+  /* merge our tools into window.ELAN (keeps images.js data safe) */
+  Object.assign(window.ELAN, {
     // helpers
     $, $$, formatPrice, esc, getParam, debounce, findProduct, discountPct,
     CATEGORY_LABEL, GENDER_LABEL, I, shopUrl,
@@ -1067,5 +1085,5 @@
     toast, renderProductCard, skeletonCards, openQuickView, openMiniCart,
     openMobileMenu, openSearchOverlay, closeAllLayers, updateBadges, renderMiniCart,
     initRevealFor, ensureBackdrop
-  };
+  });
 })();

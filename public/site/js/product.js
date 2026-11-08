@@ -7,6 +7,7 @@
 (function () {
   'use strict';
   const E = window.ELAN;
+  const $ = E.$; const $$ = E.$$;
 
   const id = E.getParam('id');
   const p = E.findProduct(id);

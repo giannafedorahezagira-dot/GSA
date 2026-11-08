@@ -6,6 +6,7 @@
 (function () {
   'use strict';
   const E = window.ELAN;
+  const $ = E.$; const $$ = E.$$;
 
   function renderWishlist() {
     const ids = E.getWishlist();

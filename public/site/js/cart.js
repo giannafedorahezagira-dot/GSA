@@ -7,6 +7,7 @@
 (function () {
   'use strict';
   const E = window.ELAN;
+  const $ = E.$; const $$ = E.$$;
 
   function renderCart() {
     const lines = E.getCart();
