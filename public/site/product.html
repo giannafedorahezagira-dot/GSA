@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | ÉLAN</title>
+  <meta name="description" content="Product details — ÉLAN premium fashion.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e0e0e'/%3E%3Ctext x='32' y='45' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='white' text-anchor='middle'%3E%C3%89%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header"></header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" id="pdpCrumbs" aria-label="Breadcrumb"></nav>
+
+    <div id="pdpNotFound" class="empty-state" hidden>
+      <div class="empty-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </div>
+      <h3>Product Not Found</h3>
+      <p>The item you're looking for may have sold out or been moved.</p>
+      <a class="btn" href="shop.html">Continue Shopping</a>
+    </div>
+
+    <div class="pdp-grid" id="pdpGrid">
+      <!-- Gallery -->
+      <div class="pdp-gallery">
+        <div class="pdp-mainimg" id="pdpMainImg"></div>
+        <div class="pdp-thumbs" id="pdpThumbs"></div>
+      </div>
+
+      <!-- Info (rendered by product.js) -->
+      <div class="pdp-info" id="pdpInfo"></div>
+    </div>
+
+    <!-- Related products -->
+    <section class="section" aria-label="Related products">
+      <div class="section-head">
+        <div>
+          <span class="section-eyebrow">Complete the look</span>
+          <h2 class="section-title">You May Also Like</h2>
+        </div>
+      </div>
+      <div class="product-grid" id="relatedGrid"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉLAN — Fashion Forward | Women's & Men's Clothing, Shoes & Accessories</title>
+  <meta name="description" content="ÉLAN is a premium fashion destination. Shop the latest women's and men's clothing, shoes, accessories, beauty and sportswear.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e0e0e'/%3E%3Ctext x='32' y='45' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='white' text-anchor='middle'%3E%C3%89%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header + Footer are rendered by js/app.js to keep pages DRY -->
+  <header id="site-header"></header>
+
+  <main id="main">
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero" id="hero" aria-label="Featured campaigns">
+      <div id="heroSlides"></div>
+      <button class="hero-arrow prev" id="heroPrev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="hero-arrow next" id="heroNext" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slides"></div>
+    </section>
+
+    <!-- ============ PERKS STRIP ============ -->
+    <section class="perks" aria-label="Store benefits">
+      <div class="perks-inner">
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div><b>Free Delivery</b><span>On orders over $75</span></div>
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 109-9"/><path d="M3 3v6h6"/><path d="M9 12l4 4 8-8"/></svg>
+          <div><b>30-Day Returns</b><span>Easy &amp; free collection</span></div>
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <div><b>Secure Payment</b><span>Encrypted checkout</span></div>
+        </div>
+        <div class="perk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 01-8.5 8.5 8.5 8.5 0 01-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 01-.9-3.8 8.38 8.38 0 018.5-8.5 8.38 8.38 0 018.5 8.5z"/></svg>
+          <div><b>24/7 Support</b><span>We're here to help</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-eyebrow">Explore the edit</span>
+          <h2 class="section-title">Shop by Category</h2>
+        </div>
+      </div>
+      <div class="category-grid" id="categoryGrid"><!-- tiles injected by home.js --></div>
+    </section>
+
+    <!-- ============ TRENDING ============ -->
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-eyebrow">Loved by everyone</span>
+          <h2 class="section-title">Trending Now</h2>
+        </div>
+        <a class="view-all" href="shop.html?sort=popular">View All</a>
+      </div>
+      <div class="product-grid" id="trendingGrid"><!-- cards injected by home.js --></div>
+    </section>
+
+    <!-- ============ PROMO BANNERS ============ -->
+    <section class="section container" aria-label="Promotions">
+      <div class="promo-duo" id="promoDuo"><!-- banners injected by home.js --></div>
+    </section>
+
+    <!-- ============ NEW ARRIVALS ============ -->
+    <section class="section container">
+      <div class="section-head reveal">
+        <div>
+          <span class="section-eyebrow">Just landed</span>
+          <h2 class="section-title">New Arrivals</h2>
+        </div>
+        <a class="view-all" href="shop.html?new=1">View All</a>
+      </div>
+      <div class="scroll-wrap">
+        <button class="row-arrow prev" id="newPrev" aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="scroll-row scroll-thin" id="newRow"><!-- cards injected by home.js --></div>
+        <button class="row-arrow next" id="newNext" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ EDITORIAL ============ -->
+    <section class="section container">
+      <div class="editorial reveal">
+        <div class="editorial-img">
+          <img id="editorialImg" src="" alt="ÉLAN editorial campaign" loading="lazy">
+        </div>
+        <div class="editorial-body">
+          <span class="editorial-eyebrow">The ÉLAN Philosophy</span>
+          <h2 class="editorial-title">Dress Like<br>It Matters</h2>
+          <p class="editorial-text">Born from a love of clean lines and confident silhouettes, ÉLAN curates wardrobe essentials and statement pieces for people who get dressed on purpose. Considered design. Honest fabrics. Zero compromise.</p>
+          <a class="btn btn--light" href="info.html?page=about">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

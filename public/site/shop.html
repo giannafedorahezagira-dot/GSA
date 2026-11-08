@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | ÉLAN</title>
+  <meta name="description" content="Browse the full ÉLAN collection. Filter by category, size, color and price.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%230e0e0e'/%3E%3Ctext x='32' y='45' font-family='Arial Black, sans-serif' font-size='34' font-weight='900' fill='white' text-anchor='middle'%3E%C3%89%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="site-header"></header>
+
+  <main id="main" class="container">
+
+    <nav class="breadcrumb" id="shopCrumbs" aria-label="Breadcrumb"></nav>
+
+    <div class="page-head">
+      <h1 class="page-title" id="shopTitle">All Products</h1>
+      <p class="page-sub" id="shopSubtitle"></p>
+    </div>
+
+    <div class="shop-layout">
+      <!-- Filters sidebar (content rendered by shop.js) -->
+      <aside class="filters" id="filtersPanel" aria-label="Product filters">
+        <div class="filters-head">
+          <h3>Filters</h3>
+          <div style="display:flex;gap:12px;align-items:center">
+            <button class="filters-clear" id="clearAllBtn">Clear all</button>
+            <button class="icon-btn filters-close" id="closeFilters" aria-label="Close filters" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="filtersBody"><!-- filter groups injected by shop.js --></div>
+      </aside>
+
+      <!-- Results -->
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <button class="btn btn--outline btn--sm filters-btn" id="openFilters" aria-haspopup="dialog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Filters
+          </button>
+          <span class="shop-count" id="shopCount"></span>
+          <select class="sort-select" id="sortSelect" aria-label="Sort products">
+            <option value="popular">Sort: Popularity</option>
+            <option value="new">Newest</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+
+        <div class="active-pills" id="activePills"></div>
+
+        <div class="product-grid" id="shopGrid"></div>
+
+        <div class="load-more-wrap" id="loadMoreWrap" hidden>
+          <button class="btn btn--outline" id="loadMoreBtn">Load More</button>
+          <span class="load-more-info" id="loadMoreInfo"></span>
+        </div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3>Nothing Matches Yet</h3>
+          <p id="emptyMsg">Try removing a filter or searching for something else.</p>
+          <a class="btn" href="shop.html">Browse Everything</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* ============================================================
+   ÉLAN — components.css
+   Product cards, product grids, scroll rows, category tiles,
+   promo banners, perks strip & editorial split section
+   ============================================================ */
+
+/* ---------- Product grid ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(14px, 2vw, 24px) clamp(10px, 1.4vw, 18px);
+}
+@media (max-width: 1080px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 18px 10px; } }
+
+/* ---------- Product card ---------- */
+.p-card { position: relative; animation: cardIn .45s var(--ease) backwards; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+.p-media {
+  position: relative; overflow: hidden; border-radius: 3px;
+  background: var(--smoke); aspect-ratio: 3 / 4; display: block;
+}
+.p-media img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform .7s var(--ease), opacity .45s var(--ease);
+}
+.p-media img.p-img-alt { opacity: 0; }
+.p-card:hover .p-media img.p-img-main { transform: scale(1.04); }
+.p-card:hover .p-media img.p-img-alt { opacity: 1; transform: scale(1.04); }
+
+/* hover action bar */
+.p-actions {
+  position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 3;
+  transform: translateY(10px); opacity: 0;
+  transition: transform .3s var(--ease), opacity .3s var(--ease);
+}
+.p-card:hover .p-actions, .p-card:focus-within .p-actions { transform: none; opacity: 1; }
+.p-quickview {
+  width: 100%; min-height: 42px;
+  background: rgba(255, 255, 255, .94); backdrop-filter: blur(4px);
+  font-size: 11.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  border-radius: 2px;
+  transition: background .2s;
+}
+.p-quickview:hover { background: var(--ink); color: #fff; }
+@media (hover: none) {
+  /* always visible & no hover-swap on touch devices */
+  .p-actions { transform: none; opacity: 1; }
+  .p-quickview { min-height: 38px; font-size: 10.5px; }
+}
+
+/* wishlist heart */
+.p-wish {
+  position: absolute; top: 10px; right: 10px; z-index: 3;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255, 255, 255, .92);
+  display: inline-flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(-6px);
+  transition: opacity .25s, transform .25s, background .2s;
+}
+.p-card:hover .p-wish, .p-card:focus-within .p-wish { opacity: 1; transform: none; }
+.p-wish svg { width: 17px; height: 17px; transition: transform .2s; }
+.p-wish:hover svg { transform: scale(1.15); }
+.p-wish.active { opacity: 1; transform: none; }
+.p-wish.active svg { fill: var(--sale); color: var(--sale); }
+.p-wish.pulse svg { animation: heartPulse .4s var(--ease); }
+@keyframes heartPulse { 40% { transform: scale(1.4); } }
+@media (hover: none) { .p-wish { opacity: 1; transform: none; } }
+
+/* info */
+.p-info { padding-top: 11px; }
+.p-row1 { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.p-name { font-size: 13.5px; font-weight: 600; line-height: 1.35; }
+.p-name a::after { content: ""; position: absolute; inset: 0; } /* whole card clickable */
+.p-brand { font-size: 11px; color: var(--muted); letter-spacing: .04em; margin-top: 1px; }
+.p-price { font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.p-price .old { color: var(--muted); text-decoration: line-through; font-weight: 500; margin-right: 6px; }
+.p-price .now--sale { color: var(--sale); }
+.p-rating { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--muted); margin-top: 4px; }
+.p-rating .stars { color: var(--gold); font-size: 11px; letter-spacing: 1.5px; }
+.p-colors { display: flex; gap: 5px; margin-top: 7px; }
+.p-colors i {
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, .18);
+}
+
+/* skeleton card */
+.skel-card .skeleton:first-child { aspect-ratio: 3 / 4; border-radius: 3px; }
+.skel-card .skel-line { height: 12px; margin-top: 12px; }
+.skel-card .skel-line.short { width: 55%; margin-top: 8px; }
+
+/* ---------- Scroll row (New arrivals) ---------- */
+.scroll-wrap { position: relative; }
+.scroll-row {
+  display: grid; grid-auto-flow: column;
+  grid-auto-columns: clamp(220px, 23vw, 290px);
+  gap: clamp(10px, 1.4vw, 18px);
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+.scroll-row::-webkit-scrollbar { display: none; }
+.scroll-row > * { scroll-snap-align: start; }
+.row-arrow {
+  position: absolute; top: 34%; z-index: 5;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; box-shadow: var(--shadow-1); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s, box-shadow .2s, opacity .2s, background .2s, color .2s;
+}
+.row-arrow:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.row-arrow.prev { left: -14px; }
+.row-arrow.next { right: -14px; }
+.row-arrow[disabled] { opacity: 0; pointer-events: none; }
+@media (max-width: 760px) { .row-arrow { display: none; } }
+
+/* ---------- Category tiles ---------- */
+.category-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 22px);
+}
+@media (max-width: 900px) { .category-grid { grid-template-columns: repeat(2, 1fr); } }
+.cat-tile {
+  position: relative; overflow: hidden; border-radius: 4px;
+  aspect-ratio: 4 / 4.6; display: block; background: var(--smoke-2);
+}
+.cat-tile img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform .8s var(--ease);
+}
+.cat-tile:hover img { transform: scale(1.06); }
+.cat-tile::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .52), rgba(0, 0, 0, .04) 52%);
+}
+.cat-tile .cat-body {
+  position: absolute; left: 16px; right: 16px; bottom: 15px; z-index: 2; color: #fff;
+}
+.cat-tile .cat-name {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(16px, 2vw, 21px); text-transform: uppercase; line-height: 1.15;
+}
+.cat-tile .cat-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+  margin-top: 7px; opacity: .92;
+}
+.cat-tile .cat-link svg { width: 13px; height: 13px; transition: transform .25s; }
+.cat-tile:hover .cat-link svg { transform: translateX(4px); }
+
+/* ---------- Perks strip ---------- */
+.perks { background: var(--smoke); border-block: 1px solid var(--line); }
+.perks-inner {
+  max-width: var(--container); margin-inline: auto; padding: 16px var(--gutter);
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.perk { display: flex; align-items: center; gap: 11px; font-size: 12.5px; }
+.perk svg { width: 20px; height: 20px; flex: none; }
+.perk b { font-weight: 700; }
+.perk span { color: var(--muted); display: block; font-size: 11.5px; }
+@media (max-width: 760px) {
+  .perks-inner { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Promo banners ---------- */
+.promo-duo {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 2vw, 22px);
+}
+@media (max-width: 800px) { .promo-duo { grid-template-columns: 1fr; } }
+.promo {
+  position: relative; overflow: hidden; border-radius: 4px;
+  min-height: clamp(300px, 36vw, 430px);
+  display: flex; align-items: flex-end; background: var(--smoke-2);
+}
+.promo img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform .9s var(--ease);
+}
+.promo:hover img { transform: scale(1.05); }
+.promo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .58), rgba(0, 0, 0, .08) 58%);
+}
+.promo-body {
+  position: relative; z-index: 2; color: #fff;
+  padding: clamp(20px, 3vw, 34px);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+}
+.promo-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; opacity: .92; }
+.promo-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(22px, 3.4vw, 34px); text-transform: uppercase; line-height: 1.08;
+}
+.promo-sub { font-size: 13.5px; opacity: .9; max-width: 380px; }
+.promo--dark .promo-body { align-items: center; text-align: center; margin-inline: auto; }
+
+/* ---------- Editorial split ---------- */
+.editorial {
+  display: grid; grid-template-columns: 1.15fr 1fr;
+  max-width: var(--container); margin-inline: auto;
+  border-radius: 4px; overflow: hidden;
+}
+.editorial-img { position: relative; min-height: clamp(300px, 40vw, 500px); background: var(--smoke-2); }
+.editorial-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.editorial-body {
+  background: var(--ink); color: #fff;
+  padding: clamp(28px, 5vw, 64px);
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px;
+}
+.editorial-eyebrow { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: #9c978f; }
+.editorial-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(22px, 3.2vw, 36px); text-transform: uppercase; line-height: 1.12;
+}
+.editorial-text { font-size: 14px; line-height: 1.8; color: #b9b5ae; max-width: 440px; }
+.editorial .btn--light { margin-top: 8px; }
+@media (max-width: 860px) { .editorial { grid-template-columns: 1fr; } }
+
+/* ---------- Misc shared ---------- */
+.ratio-hero-img { object-position: center 22%; } /* keep faces in frame on wide crops */
